@@ -2,28 +2,29 @@ import { Schema, model, Document } from "mongoose";
 
 interface IRoom extends Document {
     _id: string;
-    ownerId: string;
-    inviteLink: string;
-    crateAt: Date;
+    roomId: string;
+    email: string;
+    createdAt: Date;
 }
 
-const roomSchema = new Schema<IRoom>({
+const inviteSchema = new Schema<IRoom>({
     _id: {
         type: String,
         required: true,
     },
-    ownerId: {
+    roomId: {
         type: String,
         required: true,
     },
-    inviteLink: {
+    email: {
         type: String,
         required: true,
     },
-    crateAt: {
+    createdAt: {
         type: Date,
         default: Date.now,
     },
 });
 
-export const Room = model<IRoom>("Room", roomSchema);
+export const Invite = model<IRoom>("Invite", inviteSchema);
+

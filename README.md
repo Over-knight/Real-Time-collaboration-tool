@@ -61,3 +61,7 @@ Auth Modal / Panel
 Email / Password fields + Signup / Login toggle
 
 Simple error messages
+
+
+
+I'll be continuing soon just need time to work on my basics
